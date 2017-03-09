@@ -1,4 +1,4 @@
-# Projekt Bananpaj #
+# Projekt Mission Appossible #
 
 Det här projektet går ut på att skapa en responsiv hemsida med enkel funktionalitet.
 Sidan ska utvecklas enligt **mobile first**. 
