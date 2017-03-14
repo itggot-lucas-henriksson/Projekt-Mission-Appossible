@@ -1,0 +1,14 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.all {
+
+    width: 97vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+
+}
