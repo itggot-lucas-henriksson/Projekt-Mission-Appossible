@@ -12,62 +12,21 @@ body {
     flex-direction: row;
     font-family: 'Roboto', sans-serif;
     margin: 0px;
+    padding: 0px;
     color: white;
 
 }
 
-header {
-    height: 72px;
+.button {
+    display: unset;
     position: fixed;
-    z-index: 3;
-    top: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #303030;
-}
-
-h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.8em;
-}
-
-h2 {
-    display: inline-block;
-    font-size: 1em;
-}
-
-.menulink {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-.browselink {
-    color: white;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    display: inline;
-}
-
-
-.main {
-    background-color: #424242;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-content {
-    background-color: #424242;
-    padding: 1%;
-    padding-top: 76px;
-    height: 100%;
-    width: 100%;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    z-index: 100;
+    margin-left: 8px;
+    margin-top: 11px;
 }
 
 .menu {
@@ -85,6 +44,11 @@ content {
     background-color: #303030;      
 }
 
+.background {
+    width: 100%;
+    z-index: 5;
+}
+
 menuitem {
     padding-left: 16px;
     display: flex;
@@ -93,25 +57,43 @@ menuitem {
     margin-top: 8px;
 }
 
+.menulink {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
 .icon {
     padding-right: 16px;
 }
 
-.background {
+.main {
+    background-color: #424242;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    z-index: 5;
+    margin: 0px;
+    padding: 0px;
 }
 
-.button {
-    display: unset;
+header {
+    height: 72px;
     position: fixed;
-    left: 0;        
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    z-index: 100;
-    margin-left: 8px;
-    margin-top: 11px;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #303030;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.8em;
 }
 
 .search {
@@ -123,15 +105,21 @@ menuitem {
     padding-right: 8px;
 }
 
-content {
+article {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
-    justify-content: flex-start;
+    justify-content: space-around;
+    background-color: #424242;
+    margin: 0;
+    padding: 1%;
+    padding-top: 76px;
+    height: 100%;
+    width: 100%;
 }
 
-article {
+figure {
     margin: 1%;
     width: 47%;
     display: flex;
@@ -144,6 +132,11 @@ article {
     width: 100%;
     height: auto;
     z-index: 1;
+}
+
+h2 {
+    display: inline-block;
+    font-size: 1em;
 }
 
     .browse_item_big {
@@ -160,9 +153,12 @@ article {
     padding-left: 8px;        
 }
 
-.content_picture {
-    width: 60%;
-    height: auto;
+.browselink {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
 }
 
 .location_site {
@@ -189,7 +185,14 @@ p {
 and (min-device-width : 426px) {
 
         article {
-        margin: 0.75%;
+        padding: 0.8%;
+        padding-top: 76px;
+        height: 100%;
+        width: 100%;
+    }
+        
+        figure {
+        margin: 0.8%;
         width: 23%;
         display: flex;
         flex-direction: column-reverse;
@@ -210,16 +213,9 @@ and (min-device-width : 426px) {
     }
 
         .browse_item_big {
-        display: unset;
+        display: unset; 
         width: 100%;
         height: auto;
         z-index: 1;
-    }
-    content {
-        background-color: #424242;
-        padding: 0.75%;
-        padding-top: 76px;
-        height: 100%;
-        width: 100%;
     }
 }
