@@ -40,6 +40,21 @@ h2 {
     font-size: 1em;
 }
 
+.menulink {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.browselink {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+
 .main {
     background-color: #424242;
     display: flex;
@@ -55,91 +70,156 @@ content {
     width: 100%;
 }
 
+.menu {
+    display: none;
+}
 
- 
+.menuVisible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    z-index: 4;
+    background-color: #303030;      
+}
 
-    .menu {
-        display: none;
-    }
+menuitem {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8px;
+}
 
-    .menuVisible {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 80%;
-        max-width: 300px;
-        height: 100%;
-        z-index: 4;
-        background-color: #303030;      
-    }
+.icon {
+    padding-right: 16px;
+}
 
-    .menuitem {
-        padding-left: 16px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 8px;
-    }
+.background {
+    width: 100%;
+    z-index: 5;
+}
 
-    .icon {
-        padding-right: 16px;
-    }
+.button {
+    display: unset;
+    position: fixed;
+    left: 0;        
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    z-index: 100;
+    margin-left: 8px;
+    margin-top: 11px;
+}
 
-    .background {
-        width: 100%;
-        z-index: 5;
-    }
+.search {
+    position: fixed;
+    right: 0;        
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    padding-right: 8px;
+}
 
-    .button {
-        display: unset;
-        position: fixed;
-        left: 0;        
-        width: 50px;
-        height: 50px;
-        background-color: transparent;
-        z-index: 100;
-        margin-left: 8px;
-        margin-top: 11px;
-    }
+content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
 
-    .search {
-        position: fixed;
-        right: 0;        
-        width: 50px;
-        height: 50px;
-        background-color: transparent;
-        padding-right: 8px;
-    }
+article {
+    margin: 1%;
+    width: 47%;
+    display: flex;
+    flex-direction: column-reverse;
+}
 
-    content {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: flex-start;
-    }
+.browse_item {
+    display: unset;
+    position: static;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
 
-    article {
-        margin: 1%;
-        width: 47%;
+    .browse_item_big {
+    display: none;
+}
+
+.description {
+    position: absolute;
+    width: calc(47% - 8px);
+    color: white;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 2;
+    padding-left: 8px;        
+}
+
+.content_picture {
+    width: 60%;
+    height: auto;
+}
+
+.location_site {
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}
+
+.popular_site {
+    background-image: url(https://s-media-cache-ak0.pinimg.com/originals/fc/87/fe/fc87fee1fb262de65cb8a7b5e586a1b0.jpg);
+}
+
+p {
+    background-color: lightblue;
+    color: black;
+    opacity: 80;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+    @media only screen
+and (min-device-width : 426px) {
+
+        article {
+        margin: 0.75%;
+        width: 23%;
         display: flex;
         flex-direction: column-reverse;
     }
 
-    .travel {
-        position: static;
-        width: 100%;
-        height: auto;
-        z-index: 1;
-    }
-
-    .description {
+        .description {
         position: absolute;
-        width: calc(47% - 8px);
+        width: calc(23% - 8px);
         color: white;
         background-color: black;
         opacity: 0.7;
         z-index: 2;
         padding-left: 8px;
-        
     }
+
+        .browse_item {
+        display: none;
+    }
+
+        .browse_item_big {
+        display: unset;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+    content {
+        background-color: #424242;
+        padding: 0.75%;
+        padding-top: 76px;
+        height: 100%;
+        width: 100%;
+    }
+}
